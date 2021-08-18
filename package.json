@@ -1,0 +1,19 @@
+{
+  "name": "test-wiki",
+  "version": "1.0.0",
+  "description": "Project to test out GitHub actions working with repo wiki page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexiva0/test-wiki.git"
+  },
+  "author": "Alex Ivanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexiva0/test-wiki/issues"
+  },
+  "homepage": "https://github.com/alexiva0/test-wiki#readme"
+}
