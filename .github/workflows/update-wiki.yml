@@ -26,4 +26,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           repository: alexiva0/test-wiki.wiki
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
