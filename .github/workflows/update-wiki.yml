@@ -1,0 +1,29 @@
+name: Update Wiki
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: alexiva0/test-wiki.wiki    # the wiki repo name.
+      - name: edit wiki
+        run: |
+          echo "My own cool text" >> Home.md
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Add changes"
+      - name: Push changes to wiki repo
+        uses: ad-m/github-push-action@master
+        with:
+          repository: alexiva0/test-wiki.wiki
+          github_token: ${{ secrets.GITHUB_TOKEN }}
