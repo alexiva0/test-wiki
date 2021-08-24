@@ -14,7 +14,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: alexiva0/test-wiki.wiki    # the wiki repo name.
-      - name: edit wiki
+      - name: Print files
+        run: |
+          ls -la
+      - name: Edit wiki
         run: |
           echo "My own cool text" >> Home.md
       - name: Commit files
