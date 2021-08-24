@@ -17,6 +17,12 @@ jobs:
       - name: Print files
         run: |
           ls -la
+      - name: Delete test script
+        run: |
+          rm test.sh
+      - name: Print files
+        run: |
+          ls -la
       - name: Edit wiki
         run: |
           echo "My own cool text" > Home.md
