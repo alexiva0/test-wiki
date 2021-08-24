@@ -27,7 +27,5 @@ jobs:
           git add .
           git commit -m "Add changes"
       - name: Push changes to wiki repo
-        uses: ad-m/github-push-action@master
-        with:
-          repository: https://github.com/alexiva0/test-wiki.wiki.git
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          git push "https://alexiva0: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@github.com/alexiva0/test-wiki.wiki.git" HEAD:master
