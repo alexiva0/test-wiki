@@ -25,7 +25,7 @@ jobs:
           ls -la
       - name: Edit wiki
         run: |
-          echo "My own cool text" > Home.md
+          echo "My own cool text pushed with GITHUB_TOKEN" > Home.md
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
@@ -34,4 +34,4 @@ jobs:
           git commit -m "Add changes"
       - name: Push changes to wiki repo
         run: |
-          git push "https://alexiva0:${MY_TEMP_GH_TOKEN}@github.com/alexiva0/test-wiki.wiki.git" HEAD:master
+          git push "https://alexiva0:${secrets.GITHUB_TOKEN}@github.com/alexiva0/test-wiki.wiki.git" HEAD:master
