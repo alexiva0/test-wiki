@@ -28,4 +28,4 @@ jobs:
           git commit -m "Add changes"
       - name: Push changes to wiki repo
         run: |
-          git push "https://alexiva0:${secrets.GITHUB_TOKEN}@github.com/alexiva0/test-wiki.wiki.git" HEAD:master
+          git push "https://alexiva0:${GITHUB_TOKEN}@github.com/alexiva0/test-wiki.wiki.git" HEAD:master
